@@ -1,0 +1,176 @@
+/* TODO: Implement solution here */
+
+.panel.center{
+    position: relative;
+    top: 0px;
+    height: 100vh;
+    width: 90vw;
+    display: flex;
+}
+
+/* wrapper that contains all of the wine item boxes */
+.wrapper-item { 
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+  
+body{
+    width: 100vw;
+    margin: 0;
+    height: 100vh;
+}
+
+/* button class for adding wine item to cart */
+.toggle{
+    position: fixed;
+    border: none;
+    background: none;
+    font-weight: bold;
+    font-size: 1.5em; 
+    color: rgb(76,76,76);
+    z-index: 1;
+}
+
+/* button class that triggers the overlap that displays more info about wine item */
+.overlapBTN{
+    position: absolute;
+    border: none;
+    background: none;
+    font-weight: bold;
+    font-size: 1em; 
+    color: rgb(210,209,210);
+    z-index: 1;
+    right: 0;
+    top: 4px;
+}
+
+/* Wine Item Box */
+.cardHolder{
+    width: 130px;
+    height: 180px;
+    background-color: #fff;
+    margin: 20px;
+    position: relative;
+    overflow-y: hidden;
+    display: inline-block;
+    align-items: center;
+    box-shadow: 3px 3px 5px 6px #181818;
+    border-radius: 1px;
+}
+
+/* Dimmed the overall color of wine item box using overlay*/
+.cardHolderOverlay{
+    width: 130px;
+    height: 180px;
+    background-color: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    z-index: 1;
+}
+
+/* style of wine picture in wine item box */
+.wineIMG{
+    width: 80px;
+    height: 120px;
+    top: 10px !important;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    display:block;
+    margin:auto;
+    z-index: 0;
+}
+
+/* Should have used SCSS to clean up this mess (.infoHeader & .dividerHeader)*/
+.infoHeader{
+    font-size: 0.8em; 
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 20px;
+    height: auto;
+    text-overflow: ellipsis;
+    position: relative;
+    color: rgb(210,209,210);
+}
+
+.dividerHeader{
+    font-size: 0.8em; 
+    padding-top: 0px;
+    padding-left: 5px;
+    padding-right: 20px;
+    height: auto;
+    text-overflow: ellipsis;
+    position: relative;
+    color: rgb(210,209,210);
+    
+}
+
+.infoCatHeader{
+    font-size: 0.8em; 
+    font-weight: bold;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 20px;
+    height: auto;
+    text-overflow: ellipsis;
+    position: relative;
+    color: rgb(141,141,141);
+}
+
+/* overlap styling (contains more info about wine item) */
+.overlap{
+    width: 100%;
+    background-color: #000;
+    opacity: .5;
+    position: absolute;
+    height: 45px;
+    top: 135px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+/* styles the cent portion of wine unit price  */
+.priceStyleCent{
+    position: absolute;
+    right: 5px;
+    top: 8px;
+    color: rgb(67,67,67);
+    font-size: 0.8em; 
+    text-decoration: underline;
+}
+
+/* styles the dollar portion of wine unit price  */
+.priceStyleDollar{
+    position: absolute;
+    right: 18px;
+    top: 8px;
+    color: rgb(67,67,67);
+    font-size: 1.4em; 
+    z-index: 1;
+    
+}
+
+/* keyframes for overlap animation */
+@keyframes overlapOpen{
+    0%{
+        height: 45px;
+        top: 135px;
+    }
+    100%{
+        height: 180px;
+        top: 0px;
+    }
+}
+@keyframes overlapClose{
+    0%{
+        height: 180px;
+        top: 0px;
+    }
+    100%{
+        height: 45px;
+        top: 135px;
+    }
+}

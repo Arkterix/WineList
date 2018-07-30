@@ -1,0 +1,213 @@
+/* TODO: Implement solution here */
+
+.panel.right {
+    position: absolute;
+    right: -52vh; 
+    display: block;    
+    height: 100vh;
+    width: 55vh;
+}
+
+/* Styling for shopping cart */
+.shopcart{
+    position: absolute;
+    left: 3vh;
+    background-color: rgb(41,41,41);
+    height: 100vh;
+    width: 52vh;
+    z-index: 1;
+    border-left-width:1px;
+    border-left-color:rgb(67,67,67);
+    border-left-style: solid;
+    box-shadow: -5px 0px 10px 1px #181818;
+    z-index: 2;
+}
+
+.shopcartBtn{
+    position: absolute;
+    left: 0;
+    top: 2%;
+    width: 3vh;
+    height: 3vh;
+    background-color: rgb(76,76,76);
+    border: none;
+    color: rgb(210,209,210);
+    z-index: 1;
+}
+
+/* Styling for top section fo shopping cart containing labels and header */
+.shopcartLabel{
+    position: absolute;
+    background-color: rgb(76,76,76);
+    height: 10vh;
+    width: 100%;
+    z-index: 1;
+    border-bottom-width:3px;
+    border-bottom-color:rgb(0,126,158);
+    border-bottom-style: solid;
+    z-index: 2;
+}
+
+.shopcartLabel h1{
+    font-size: 1.5em;
+    color: rgb(210,209,210);
+    padding: 10px;
+}
+
+.shopcartLabel h2{
+    font-size: 1em;
+    color: rgb(171,171,171);
+    font-weight: bold;
+}
+
+#qtyLabel{
+    position: absolute;
+    left: 40px;
+    padding: 5px;
+    bottom: 5px;
+}
+
+#descLabel{
+    position: absolute;
+    left: 80px;
+    padding: 5px;
+    bottom: 5px;
+}
+
+#priceLabel{
+    position: absolute;
+    left: 300px;
+    padding: 5px;
+    bottom: 5px;
+}
+
+#amountLabel{
+    position: absolute;
+    left: 400px;
+    padding: 5px;
+    bottom: 5px;
+}
+
+/* Section where cart items will be displayed */
+#cartList{
+    position: absolute;
+    top: 10vh;
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Section where total sale price (total amount) will be displayed */
+#cartTotal{
+    position: absolute;
+    background-color: rgb(76,76,76);
+    bottom: 0;
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    border-top-width:3px;
+    border-top-color:rgb(0,126,158);
+    border-top-style: solid;
+    z-index: 2;
+}
+
+#totalLabel{
+    position: absolute;
+    left: 280px;
+    padding-top: 16px; 
+}
+
+#totalAmount{
+    position: absolute;
+    left: 380px;
+    padding-top: 16px; 
+}
+
+#cartTotal h2{
+    font-size: 1em;
+    color: rgb(171,171,171);
+    font-weight: bold; 
+}
+
+/* Styling for cart item */
+.cartItem{
+    width: 100%;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+    display: table;
+}
+
+.cartItem h2{
+    font-size: 1em;
+    color: rgb(171,171,171);
+}
+
+/* Styling for the units in each cart item */
+.itemQTY{
+    position: absolute;
+    left: 40px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 5px; 
+    display: table-row;
+}
+.itemDesc{
+    position: absolute;
+    left: 80px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 5px; 
+    width: 200px;
+    display: table-row;
+}
+.itemPrice{
+    position: absolute;
+    left: 300px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 5px; 
+    display: table-row;
+}
+.itemTotalPrice{
+    position: absolute;
+    left: 400px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 5px; 
+    display: table-row;
+}
+
+/* Delete button styling for cart item */
+.deleteButton{
+    font-size: 1.4em;
+    color: rgb(171,171,171);
+    font-weight: bold;
+    position: absolute;
+    left: 6px;
+    padding: 10px;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+}
+
+/* Keyframes for shopping cart opening/closing animation */
+@keyframes toggleOpen{
+    0%{ 
+        right:-52vh;
+    }
+    100%{
+        right: 0vh;
+    }
+}
+
+@keyframes toggleClose{
+    0%{
+        right: 0vh;
+    }
+    100%{
+        right:-52vh;
+    }
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Wine Catalog</title>
+
+    <!-- import stylesheets -->
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+
+    <!-- import sub-stylesheets for each pane (NOTE: You are encouraged to modularize your CSS where applicable) -->
+    <link rel="stylesheet" type="text/css" href="css/left.css" />
+    <link rel="stylesheet" type="text/css" href="css/center.css" />
+    <link rel="stylesheet" type="text/css" href="css/right.css" />
+
+    <!-- import third-party libraries -->
+
+</head>
+
+<body>
+    <!-- TODO: Implement solution here -->
+
+    <div style="background:#292929;position:absolute;top:0;bottom:0;left:0;right:0;box-sizing:border-box;padding-top:20%;text-align:center;font-size:24px;">
+        
+    </div>
+
+    <div class="panel left">
+        <div class="logo">
+            <img class= "logo-img" src = './images/wine.png' alt="Smiley face">
+            <div class="wrapper">    
+                <div class= "page-title"><a style = "color: white; font-weight: bold;">WINE</a><br><a style = "letter-spacing: 3px; font-size:0.6em;">CATALOG</a></div>
+            </div>
+        </div>
+        <div class= "sortAndCat">
+            <a id="searchHeader">SEARCH<br></a>
+            <div class="search-box">
+                <input type="text" name="searchBar" value="" autocomplete="off" id="search" placeholder="Start Typing in a wine name..." class="placeHolder">
+            </div>
+            <a id="sortHeader">SORT<br></a>
+            <div class="sort-box">
+                <select name="sortList" id="sort">
+                    <option value="Name-Up" selected>Name &#8593;</option>
+                    <option value="Name-Down">Name &#8595;</option>
+                    <option value="" disabled="disabled">────────────</option>
+                    <option value="Category-Up">Category &#8593;</option>
+                    <option value="Category-Down">Category &#8595;</option>
+                    <option value="" disabled="disabled">────────────</option>
+                    <option value="Volume-Up">Volume &#8593;</option>
+                    <option value="Volume-Down">Volume &#8595;</option>
+                    <option value="" disabled="disabled">────────────</option>
+                    <option value="Price-Up">Price &#8593;</option>
+                    <option value="Price-Down">Price &#8595;</option>
+                    <option value="" disabled="disabled">────────────</option>
+                    <option value="Country-Up">Country &#8593;</option>
+                    <option value="Country-Down">Country &#8595;</option>
+                    <option value="" disabled="disabled">────────────</option>
+                    <option value="Producer-Up">Producer &#8593;</option>
+                    <option value="Producer-Down">Producer &#8595;</option>
+                </select>
+            </div>
+            <a id="catHeader">CATEGORY<br></a>
+            <div class="cat-box">
+                <button id = "All" class="button">All</button>
+                <button id = "Red-Wine" class="button">Red Wine</button>
+                <button id = "White-Wine" class="button">White Wine</button>
+                <button id = "Rose-Wine" class="button">Rose Wine</button>
+                <button id = "Champagne" class="button">Champagne</button>
+                <button id = "Sparkling-Wine" class="button">Sparkling Wine</button>
+                <button id = "Dessert" class="button">Dessert Wine</button>
+                <button id = "Icewine" class="button">Icewine</button>
+                <button id = "Fortified-Wines" class="button">Fortified Wines</button>
+                <button id = "Specialty-Wines" class="button">Specialty Wines</button>
+            </div>
+        </div>
+    </div>
+    <div class="panel center">
+        <div id="wrapperItem">
+        
+        </div>
+    </div>
+    <div class="panel right" id="rightPanel">
+        <button id = "shopcartToggle" class="shopcartBtn">&#9664;</button>
+        <div class="shopcart">
+            <div class="shopcartLabel">
+                <h1>Shopping Cart</h1>
+                <h2 id="qtyLabel">QTY</h2>
+                <h2 id="descLabel">Description</h2>
+                <h2 id="priceLabel">Unit Price</h2>
+                <h2 id="amountLabel">Amount</h2>
+            </div>
+            <div id = "cartList">
+            
+            </div>
+
+            <div id = "cartTotal">
+                <h2 id="totalLabel">Total Amount</h2>
+                <h2 id="totalAmount"></h2>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="lib/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="lib/underscore.js"></script>
+
+    <!-- import scripts -->
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/category.js"></script>
+    <script type="text/javascript" src="js/catalogItem.js"></script>
+    <script type="text/javascript" src="js/catalog.js"></script>
+    <script type="text/javascript" src="js/cart.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
+
+
